@@ -1,0 +1,20 @@
+{
+  "name": "simple-pug-sass-boilerplate",
+  "version": "1.0.0",
+  "description": "simple boilerplate for apps with pug and sass with compilation etc",
+  "main": "index.js",
+  "scripts": {
+    "compile": "pug ./src/pages -o ./dist; sass ./src/sass/app.sass ./dist/app.css",
+    "compile and watch": "pug ./src/pages -o ./dist -w & sass -w ./src/sass/app.sass ./dist/app.css",
+    "serve": "yarn run compile and watch & npx serve dist"
+  },
+  "author": "obsidianical",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.39.0",
+    "serve": "^12.0.0"
+  }
+}
