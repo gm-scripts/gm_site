@@ -1,6 +1,32 @@
 extends ../layout.pug
 
 block content
-  #about.content
-    h1 This is an about page!
-    p Hello World Foo Bar
+  #about
+    section#header
+      h1 About Us
+    section#members
+      h1 Team
+      #member-grid
+        .member
+          img(src="../assets/icons/member.png") 
+          br
+          a(href="mailto:michael@gm-scripts.com") Michael aka. Eichenholz
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .member
+          img(src="../assets/icons/member.png")
+          br
+          a(href="mailto:gabriel@gm-scripts.com") Gabriel aka. Obsidianical
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    section#contacts
+      h1 Get in Touch
+      #contact-grid
+        .contact
+          img(src="../assets/icons/email.png") 
+          br
+          h2 E-Mail
+          a(href="mailto:info@gm-scripts.com") info@gm-scripts.com
+        .contact
+          img(src="../assets/icons/discord.png")
+          br
+          h2 Discord
+          a(href="https://discord.gg/hzdxWSdTTE") discord.gg/hzdxWSdTTE

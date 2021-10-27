@@ -4,8 +4,44 @@ block append head
   title Boilerplate Main site
 
 block content
-  #home.content
-    h1 Hello World!
-    p This is some example content!
-    p.
-      Laborum aliquip nisi sit voluptate incididunt ipsum ea enim dolor tempor ullamco in. Irure laborum laboris pariatur enim cillum nulla. Proident esse fugiat laboris nisi dolore est aliqua reprehenderit mollit. Amet tempor et eu eu labore ad pariatur in aute qui laboris anim minim. Duis incididunt irure duis est. Aliquip adipisicing laboris elit id. Velit aute ipsum veniam commodo in.
+  .home.sb-thin 
+    section#header
+      .skewed
+        #main-headers
+          h1 You need FiveM scripts for a unique server? <br> Here you are right!
+          p We offer high quality scripts at good prices!
+          #header-btns
+            .btn-container
+              button.btn.to-shop(@click="$router.push('/shop')"). 
+                See products
+            .btn-container
+              button.btn.more-info(@click="scrollTo('#content')"). 
+                Tell me more
+        #header-logo
+          img(src="../assets/icons/gm_logo_inkscape.svg", alt="ein tolles logo")
+    section#cards
+      h1 What we provide
+      #cards-grid
+        .card
+          img(src="../assets/icons/quality.png")
+          h2 Quality & Performance
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .card
+          img(src="../assets/icons/compatible.png")
+          h2 Compatibility
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .card
+          img(src="../assets/icons/configurable.png")
+          h2 Configurable
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    section#products
+      h1 Our Products
+      #products-grid
+        h2 Drivingschool
+        img.product(src="../assets/img/drivingschool.png")
+        br
+        h2 Bike Rental
+        img.product(src="../assets/img/bikerental.png")
+        #products-btn-container
+          #products-btn(@click="$router.push('/shop')"). 
+            Show me more
