@@ -1,5 +1,8 @@
 extends ../layout.pug 
 
+block append styles
+  style( src="./sass/pages/_home.sass" )
+
 block append head 
   title Boilerplate Main site
 
@@ -45,3 +48,4 @@ block content
         #products-btn-container
           #products-btn(@click="$router.push('/shop')"). 
             Show me more
+

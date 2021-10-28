@@ -7,9 +7,20 @@ nav
   top: 0
   width: 100%
   background-color: $bg-secondary-transparent
-  backdrop-filter: blur(50px)
+  backdrop-filter: blur(35px)
   a
     margin: 0.55rem
     font-weight: bold
     color: $text-primary-b
     text-decoration: none
+    &::after
+      display: block
+      content: ""
+      width: 0%
+      height: 0.2rem
+      border-radius: 1rem
+      background-color: $brand
+      transition: width 0.2s
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
