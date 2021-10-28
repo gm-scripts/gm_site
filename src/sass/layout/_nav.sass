@@ -13,14 +13,7 @@ nav
     font-weight: bold
     color: $text-primary-b
     text-decoration: none
-    &::after
-      display: block
-      content: ""
-      width: 0%
-      height: 0.2rem
-      border-radius: 1rem
-      background-color: $brand
-      transition: width 0.2s
-      position: relative
-      left: 50%
-      transform: translateX(-50%)
+    transition: color 0.15s
+    &:hover
+      text-decoration: underline
+      color: $brand
