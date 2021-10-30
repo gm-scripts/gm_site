@@ -1,7 +1,7 @@
 extends ../layout.pug 
 
 block append styles
-  style( src="./sass/pages/_home.sass" )
+  style( src="./sass/pages/home.sass" )
 
 block append head 
   title Boilerplate Main site
@@ -45,7 +45,7 @@ block content
         br
         h2 Bike Rental
         img.product(src="../assets/img/bikerental.png")
-        #products-btn-container
-          #products-btn(@click="$router.push('/shop')"). 
+        .btn-container#products-btn
+          button.btn(@click="$router.push('/shop')"). 
             Show me more
 
