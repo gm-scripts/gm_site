@@ -1,5 +1,12 @@
 extends ../layout.pug
 
+block append styles
+  style( src="./sass/pages/_about.sass" )
+
+block append head 
+  title Boilerplate Main site
+
+
 block content
   #about
     section#header
@@ -29,4 +36,4 @@ block content
           img(src="../assets/icons/discord.png")
           br
           h2 Discord
-          a(href="https://discord.gg/hzdxWSdTTE") discord.gg/hzdxWSdTTE
+          a(href="https://discord.gg/hzdxWSdTTE" target="_blank") discord.gg/hzdxWSdTTE
