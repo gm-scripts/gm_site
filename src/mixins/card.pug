@@ -1,0 +1,8 @@
+mixin card(imagePath, title, description, titleLink)
+  .card
+    img( src=imagePath )
+    if titleLink
+      a( href=titleLink )= title
+    else
+      a= title
+    p= description

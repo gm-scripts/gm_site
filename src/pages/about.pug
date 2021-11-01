@@ -1,4 +1,5 @@
 extends ../layout.pug
+include ../mixins/card.pug
 
 block append styles
   style( src="./sass/pages/_about.sass" )
@@ -13,17 +14,9 @@ block content
       h1 About Us
     section#members
       h1 Team
-      #member-grid
-        .member
-          img(src="../assets/icons/member.png") 
-          br
-          a(href="mailto:michael@gm-scripts.com") Michael aka. Eichenholz
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        .member
-          img(src="../assets/icons/member.png")
-          br
-          a(href="mailto:gabriel@gm-scripts.com") Gabriel aka. Obsidianical
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      #card-grid
+        +card("../assets/icons/member.png", "Michael aka. Eichenholz", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mailto:michael@gm-scripts.com")
+        +card("../assets/icons/member.png", "Gabriel aka. Obsidianical", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mailto:gabriel@gm-scripts.com")
     section#contacts
       h1 Get in Touch
       #contact-grid

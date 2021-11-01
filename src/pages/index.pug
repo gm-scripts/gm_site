@@ -1,13 +1,14 @@
 extends ../layout.pug 
+include ../mixins/card.pug
 
 block append styles
-  style( src="./sass/pages/home.sass" )
+  style( src="./sass/pages/_home.sass" )
 
 block append head 
   title Boilerplate Main site
 
 block content
-  .home.sb-thin 
+  .home
     section#header
       .skewed
         #main-headers
@@ -24,19 +25,10 @@ block content
           img(src="../assets/icons/gm_logo_inkscape.svg", alt="ein tolles logo")
     section#cards
       h1 What we provide
-      #cards-grid
-        .card
-          img(src="../assets/icons/quality.png")
-          h2 Quality & Performance
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        .card
-          img(src="../assets/icons/compatible.png")
-          h2 Compatibility
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        .card
-          img(src="../assets/icons/configurable.png")
-          h2 Configurable
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      #card-grid
+        +card("../assets/icons/quality.png", "Quality & Performance", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        +card("../assets/icons/compatible.png", "Compatibility", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        +card("../assets/icons/configurable.png", "Configurable", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
     section#products
       h1 Our Products
       #products-grid
