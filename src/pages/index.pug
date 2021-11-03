@@ -1,9 +1,6 @@
 extends ../layout.pug 
 include ../mixins/card.pug
 
-block append styles
-  style( src="./sass/pages/_home.sass" )
-
 block append head 
   title Boilerplate Main site
 
@@ -12,7 +9,7 @@ block content
     section#header
       .skewed
         #main-headers
-          h1 You need FiveM scripts for a unique server? <br> Here you are right!
+          h1 You need FiveM scripts for a unique and performant server? <br> You've come to the right place!
           p We offer high quality scripts at good prices!
           #header-btns
             .btn-container
@@ -23,12 +20,13 @@ block content
                 Tell me more
         #header-logo
           img(src="../assets/icons/gm_logo_inkscape.svg", alt="ein tolles logo")
-    section#cards
-      h1 What we provide
-      #card-grid
-        +card("../assets/icons/quality.png", "Quality & Performance", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        +card("../assets/icons/compatible.png", "Compatibility", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-        +card("../assets/icons/configurable.png", "Configurable", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+    section#why-us
+      h1 Why choose us?
+      .cards
+        .card-container
+          +card("../assets/icons/quality.png", "Quality & Performance", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+          +card("../assets/icons/compatible.png", "Compatibility", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+          +card("../assets/icons/configurable.png", "Configurable", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
     section#products
       h1 Our Products
       #products-grid

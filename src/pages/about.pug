@@ -1,9 +1,6 @@
 extends ../layout.pug
 include ../mixins/card.pug
 
-block append styles
-  style( src="./sass/pages/_about.sass" )
-
 block append head 
   title Boilerplate Main site
 
@@ -11,22 +8,25 @@ block append head
 block content
   .about
     section#header
+      .anti-skew
       h1 About Us
-    section#members
+    section.cards
       h1 Team
-      #card-grid
+      .card-container
         +card("../assets/icons/member.png", "Michael aka. Eichenholz", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mailto:michael@gm-scripts.com")
         +card("../assets/icons/member.png", "Gabriel aka. Obsidianical", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mailto:gabriel@gm-scripts.com")
     section#contacts
-      h1 Get in Touch
-      #contact-grid
-        .contact
-          img(src="../assets/icons/email.png") 
-          br
-          h2 E-Mail
-          a(href="mailto:info@gm-scripts.com") info@gm-scripts.com
-        .contact
-          img(src="../assets/icons/discord.png")
-          br
-          h2 Discord
-          a(href="https://discord.gg/hzdxWSdTTE" target="_blank") discord.gg/hzdxWSdTTE
+      h1 Contact us or join our community!
+      .cards
+        .card-container
+          .card.connect
+            img(src="../assets/icons/email.png") 
+            br
+            h2 E-Mail
+            a(href="mailto:info@gm-scripts.com") info@gm-scripts.com
+          .card.connect
+            img(src="../assets/icons/discord.png")
+            br
+            h2 Discord
+            a(href="https://discord.gg/hzdxWSdTTE" target="_blank") discord.gg/hzdxWSdTTE
+

@@ -1,11 +1,14 @@
 @import "../util/var"
+@import "../components/card-grid"
 @import "../components/button"
 @import "../components/card"
 
 .home
+  @include card-grid(70rem)
   color: #efefff
   position: relative
   background-color: $bg-primary
+  padding-bottom: 5rem
   #header
     .skewed
       background-color: $bg-secondary
@@ -45,15 +48,6 @@
         transform: skewY(-6deg)
         img
           height: 80vh
-  #cards
-    height: 25rem
-    h1
-      font-size: 2rem
-    #cards-grid
-      margin-top: 2rem
-      display: inline-grid
-      grid-auto-flow: column
-      grid-gap: 5rem
   #products
     h1
       font-size: 2rem
@@ -61,14 +55,12 @@
       margin-top: 4rem
       margin-bottom: 1rem
     .product
-      height: 30rem
+      width: 40rem
       filter: drop-shadow(0 1.5rem 3.5rem #0000007f)
       margin: auto
-    #products-btn-container
+    .btn-container#products-btn
       margin: auto
-      margin-top: 3rem
-      margin-bottom: 6rem
+      margin-top: 7.5rem
       cursor: pointer
       border-radius: 1.25rem
       width: 20rem
-
