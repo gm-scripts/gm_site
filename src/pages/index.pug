@@ -13,10 +13,10 @@ block content
           p We offer high quality scripts at good prices!
           #header-btns
             .btn-container
-              button.btn.to-shop(@click="$router.push('/shop')"). 
+              button.btn.to-shop(onclick="window.location.replace('https://shop.gm-scripts.com/category/scripts')"). 
                 See products
             .btn-container
-              button.btn.more-info(@click="scrollTo('#content')"). 
+              button.btn.more-info(onclick="document.querySelector('#why-us').scrollIntoView({behavior:'smooth'})"). 
                 Tell me more
         #header-logo
           img(src="../assets/icons/gm_logo_inkscape.svg", alt="ein tolles logo")
@@ -36,6 +36,6 @@ block content
         h2 Bike Rental
         img.product(src="../assets/img/bikerental.png")
         .btn-container#products-btn
-          button.btn(@click="$router.push('/shop')"). 
+          button.btn(onclick="window.location.replace('https://shop.gm-scripts.com/category/scripts')"). 
             Show me more
 
