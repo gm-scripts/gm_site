@@ -2,7 +2,7 @@ mixin card(imagePath, title, description, titleLink)
   .card
     img( src=imagePath )
     if titleLink
-      a( href=titleLink )= title
+      a.title( href=titleLink )= title
     else
-      a= title
+      p.title= title
     p= description
